@@ -137,7 +137,7 @@ if(isset($_GET['action'])) {
 } else if(isset($_POST['CatName'])) {
     // Incoming create action from our form
     global $db;
-    $db->exec('INSERT INTO Category (`CatID`,`CatName`) VALUES ("' .implode('","', $_POST).'")');
+    $db->exec('INSERT INTO Category (`CatName`) VALUES ("' .implode('","', $_POST).'")');
     header('Location: admin.php');
 }
 
@@ -195,7 +195,7 @@ if(isset($_GET['action'])) {
 } else if(isset($_POST['Name']) && isset($_POST['Cost']) && isset($_POST['Details']) && isset($_POST['Count'])) {
     // Incoming create action from our form
     global $db;
-    $db->exec('INSERT INTO Products (`ProductID`,`Name`, `Cost`, `Details`, `Count`) VALUES ("' .implode('","', $_POST).'")');
+    $db->exec('INSERT INTO Products (`Name`, `Cost`, `Details`, `Count`) VALUES ("' .implode('","', $_POST).'")');
     header('Location: admin.php');
 }
 

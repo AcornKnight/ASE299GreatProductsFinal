@@ -1,3 +1,8 @@
+<?php
+  require_once(__DIR__.'/Utils/settings.php');
+  require_once(__DIR__.'/Utils/utils.php');
+  guard("guest");
+?>
 <!DOCTYPE html>
 <!-- Login page for our Great products database. -->
 <!-- Noah R Gestiehr. This page should display a login form to the user and authenticate it -->
